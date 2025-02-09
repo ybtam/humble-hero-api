@@ -1,0 +1,26 @@
+{
+  "name": "api",
+  "type": "module",
+  "scripts": {
+    "dev": "dotenv -e ../../.env -- tsx watch src/index.ts",
+    "db:push": "dotenv -e ../../.env -- drizzle-kit push",
+    "studio": "dotenv -e ../../.env drizzle-kit studio --port 4002",
+    "migration:new": "dotenv -e ../../.env -- drizzle-kit generate",
+    "migrate:up": "dotenv -e ../../.env -- drizzle-kit migrate"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.8",
+    "@libsql/client": "^0.14.0",
+    "drizzle-orm": "^0.39.2",
+    "hono": "^4.6.20",
+    "drizzle-seed": "^0.3.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "drizzle-kit": "^0.30.4",
+    "tsx": "^4.19.2",
+    "eslint": "^9.20.0",
+    "eslint-plugin-perfectionist": "^4.8.0"
+  }
+}
