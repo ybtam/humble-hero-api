@@ -34,7 +34,7 @@ superheroes.post(
   async c => {
     const data = c.req.valid('json')
 
-    return c.json(await db.insert(heros).values(data).returning())
+    return c.json((await db.insert(heros).values(data).returning())[0])
   },
 )
 
