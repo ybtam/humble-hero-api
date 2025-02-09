@@ -1,9 +1,9 @@
 import { migrate } from 'drizzle-orm/libsql/migrator'
 
-import { db } from './index.js'
+import { db } from './index.ts'
 
-async function runMigration() {
-  await migrate(db, { migrationsFolder: './db/migrations' })
+export async function runMigration() {
+  await migrate(db, { migrationsFolder: './src/db/migrations' })
 }
 
 runMigration()

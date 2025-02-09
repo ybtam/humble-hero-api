@@ -1,7 +1,7 @@
 import { serve } from '@hono/node-server'
 import { Hono } from 'hono'
 
-import superheroes from './hero/routes.js'
+import superheroes from './hero/routes.ts'
 
 export const app = new Hono()
 

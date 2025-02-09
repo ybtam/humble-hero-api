@@ -1,7 +1,7 @@
 import { createClient } from '@libsql/client'
 import { drizzle } from 'drizzle-orm/libsql'
 
-import * as HeroSchema from '../hero/schema.js'
+import * as HeroSchema from '../hero/schema.ts'
 
 const client = createClient({
   url: process.env.DB_FILE_NAME ?? '',

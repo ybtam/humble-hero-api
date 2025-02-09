@@ -3,8 +3,8 @@ import { Hono } from 'hono'
 import { validator } from 'hono/validator'
 import { z } from 'zod'
 
-import { db } from '../db/index.js'
-import { heros } from './schema.js'
+import { db } from '../db/index.ts'
+import { heros } from './schema.ts'
 import {desc} from "drizzle-orm";
 
 const superheroes = new Hono()
