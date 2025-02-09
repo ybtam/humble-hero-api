@@ -46,6 +46,7 @@ export const seedHeros: (typeof heros.$inferInsert)[] = [
 ]
 
 superheroes.post('/seed', async c => {
+  // @ts-ignore
   await reset(db, { heros })
 
   const res = await db.insert(heros).values(seedHeros).returning()
