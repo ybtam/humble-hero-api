@@ -6,21 +6,30 @@
     "db:push": "dotenv -e ../../.env -- drizzle-kit push",
     "studio": "dotenv -e ../../.env drizzle-kit studio --port 4002",
     "migration:new": "dotenv -e ../../.env -- drizzle-kit generate",
-    "migrate:up": "dotenv -e ../../.env -- drizzle-kit migrate"
+    "migrate:up": "dotenv -e ../../.env -- drizzle-kit migrate",
+    "lint": "eslint \"src/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" --fix"
   },
   "dependencies": {
     "@hono/node-server": "^1.13.8",
     "@libsql/client": "^0.14.0",
     "drizzle-orm": "^0.39.2",
-    "hono": "^4.6.20",
     "drizzle-seed": "^0.3.1",
+    "hono": "^4.6.20",
     "zod": "^3.24.1"
   },
   "devDependencies": {
+    "@eslint/js": "^8.57.1",
+    "@types/eslint": "^8.44.6",
     "@types/node": "^20.11.17",
     "drizzle-kit": "^0.30.4",
-    "tsx": "^4.19.2",
     "eslint": "^9.20.0",
-    "eslint-plugin-perfectionist": "^4.8.0"
+    "eslint-plugin-perfectionist": "^4.8.0",
+    "globals": "^15.14.0",
+    "tsx": "^4.19.2",
+    "typescript-eslint": "^8.23.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-config-prettier": "^10.0.1",
+    "prettier": "^3.5.0w"
   }
 }
