@@ -7,7 +7,7 @@ export const app = new Hono()
 
 app.route('/superheroes', superheroes)
 
-const port = 3000
+const port = 4000
 console.log(`Server is running on http://localhost:${port}`)
 
 serve({
