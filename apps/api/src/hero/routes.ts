@@ -18,7 +18,7 @@ superheroes.get('/', async c => {
 })
 
 const createHeroSchema = z.object({
-  humilityScore: z.number().min(0).max(10),
+  humilityScore: z.number().min(1).max(10),
   name: z.string().min(2),
   superpowers: z.string().min(2),
 })

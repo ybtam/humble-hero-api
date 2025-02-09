@@ -1,0 +1,65 @@
+{
+  "version": "6",
+  "dialect": "sqlite",
+  "id": "52e2b44f-9b1b-4f59-b505-ad399161e963",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "heros": {
+      "name": "heros",
+      "columns": {
+        "humility_score": {
+          "name": "humility_score",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": true
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "superpowers": {
+          "name": "superpowers",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "humility_score_min": {
+          "name": "humility_score_min",
+          "value": "\"heros\".\"humility_score\" >= 1"
+        },
+        "humility_score_max": {
+          "name": "humility_score_max",
+          "value": "\"heros\".\"humility_score\" <= 10"
+        }
+      }
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

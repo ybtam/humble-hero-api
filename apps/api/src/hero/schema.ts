@@ -10,7 +10,7 @@ export const heros = sqliteTable(
     superpowers: text('superpowers'),
   },
   table => [
-    check('humility_score_min', sql`${table.humilityScore} >= 0`),
+    check('humility_score_min', sql`${table.humilityScore} >= 1`),
     check('humility_score_max', sql`${table.humilityScore} <= 10`),
   ],
 )
