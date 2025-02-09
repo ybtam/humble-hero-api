@@ -5,11 +5,16 @@ import { z } from 'zod'
 
 import { db } from '../db/index.js'
 import { heros } from './schema.js'
+import {desc} from "drizzle-orm";
 
 const superheroes = new Hono()
 
 superheroes.get('/', async c => {
-  return c.json(await db.query.heros.findMany())
+  return c.json(await db.query.heros.findMany({
+    orderBy: [
+      desc(heros.humilityScore)
+    ]
+  }))
 })
 
 const createHeroSchema = z.object({
