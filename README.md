@@ -33,3 +33,8 @@ If i had more time I would focus on the following:
 - move db schema and zod schema out of api into a sharable package, so that both api and web can get access to the types generated from drizzle and zod
 - complete the web app with edite, delete and view for each superhero
 - create both a per project/package changelog and a high-level changelog for the project
+- implement client side validation for more interactive experience
+
+# Notes
+- reason for not choosing nestjs for the api was because it seemed too heavy for what I wanted to do
+- front end was written with nextjs, because it gave me the ability to use minimum number of libraries focusing on server actions and server components.
