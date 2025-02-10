@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Humble Hero API",
   "scripts": {
-    "dev": "dotenv -e ../../.env -- pnpm turbo dev"
+    "dev": "dotenv -e .env -- pnpm turbo dev",
+    "test": "dotenv -e .env -- pnpm turbo test"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
